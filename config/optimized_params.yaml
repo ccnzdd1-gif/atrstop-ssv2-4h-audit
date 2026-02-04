@@ -1,0 +1,25 @@
+# Optimized parameter suggestions (seed)
+version: 20260204
+notes: "Seed params for audit testing; adjust in backtests."
+
+sig_sma50_b:
+  sma200_filter: true
+  sma50_slope_min: 0.0
+  adx_min: 20
+  breakout_min_pct: 0.8
+  volume_mult: 1.2
+  price_dist_max_pct: 5.0
+
+sig_short:
+  trend_filter: "price_below_ema144_or_sma200"
+  rsi_min: 65
+  adx_min: 20
+  volume_mult: 1.2
+  drop_threshold_pct: 5.0
+
+sig_shooting_star_v2:
+  upper_wick_body_min: 2.5
+  volume_mult: 1.5
+  require_bb_upper_touch: true
+  next_bar_confirm_drop_pct: 2.0
+  high_zone: "above_bb_upper_or_ma20+5%"
